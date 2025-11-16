@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlickFusion - Movie Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1> FlickFusion</h1>
+            <p>Your  movie recommendation assistant</p>
+        </header>
+
+        <!-- Chat Container -->
+        <div class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                <!-- Messages will appear here -->
+            </div>
+            
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+                <button class="quick-btn" data-message="Hi!"> Say Hello</button>
+                <button class="quick-btn" data-message="I'm feeling sad"> Feeling Sad</button>
+                <button class="quick-btn" data-message="action movies"> Action Movies</button>
+                <button class="quick-btn" data-message="romantic movies"> Romantic Movies</button>
+                <button class="quick-btn" data-message="comedy movies"> Comedy Movies</button>
+                <button class="quick-btn" data-message="Help me find movies"> Find Movies</button>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+                <input type="text" id="userInput" placeholder="Ask me anything about movies... (like ChatGPT)" autocomplete="off">
+                <button id="sendButton">Send</button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p> <strong>Pro Tip:</strong> Talk naturally ! Ask about moods, genres, specific movies, or anything movie-related.</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
